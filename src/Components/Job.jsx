@@ -1,10 +1,12 @@
 import { VscLocation } from "react-icons/vsc";
 import { CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   //console.log(job);
 
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -14,7 +16,7 @@ const Job = ({ job }) => {
     salary,
   } = job;
 
-  console.log(logo);
+  //console.log(logo);
 
   return (
     <div className="border border-gray-500 p-8 space-y-4">
@@ -37,7 +39,11 @@ const Job = ({ job }) => {
           <p>Salary : {salary}</p>
         </div>
       </div>
-      <button className="btn btn-primary">View Details</button>
+      <div>
+        <Link to={`/job/${id}`}>
+          <button className="btn btn-primary">Show Details</button>
+        </Link>
+      </div>
     </div>
   );
 };

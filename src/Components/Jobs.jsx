@@ -1,7 +1,9 @@
-const Jobs = () => {
+const Jobs = ({ job }) => {
+  const { job_title } = job;
+
   return (
     <div>
-      <h1>Hello jobs</h1>
+      <h1>{job_title}</h1>
     </div>
   );
 };

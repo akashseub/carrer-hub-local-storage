@@ -1,7 +1,9 @@
+import FeaturedJobs from "./FeaturedJobs";
+
 function Home() {
   return (
     <div>
-      <h1>This is home</h1>
+      <FeaturedJobs></FeaturedJobs>
     </div>
   );
 }
